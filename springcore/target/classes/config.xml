@@ -8,19 +8,27 @@
     http://www.springframework.org/schema/context/spring-context.xsd">    
     
    <!--  this is our beans --> 
-   <!--  this is our first bean --> 
-      
+   <!--  this is our first bean defining/using pschema --> 
+     <bean class="com.springcore.Student" name="student0" p:rollNo="20" p:name="Ali" p:address="Mumbai"/> 
+     
+     <!--  this is our second bean defining/using values as attribute --> 
     <bean class="com.springcore.Student" name="student1">
     	<property name="rollNo" value="22"/>    	
     	<property name="name" value="John"/>
     	<property name="address" value="Luckhnow"/>
     		
     </bean>
-     <!--  this is our second bean -->    
+         <!--  this is our third bean defining/using property and value tags --> 
     <bean class="com.springcore.Student" name="student2">
-    	<property name="rollNo" value="23"/>    	
-    	<property name="name" value="Wakeel"/>
-    	<property name="address" value="Mumbai"/>
+    	<property name="rollNo">
+    	<value>23</value>
+    	</property>    	
+    	<property name="name">
+    	<value>Wakeel</value>
+    	</property>
+    	<property name="address">
+    	<value>Mumbai</value>
+    	</property>
     		
     </bean>
     
